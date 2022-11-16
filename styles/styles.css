@@ -54,12 +54,9 @@ main{
     align-items: center;
     background-color: #ffffff;
     width: 100%;
-    margin: 0%;
 }
 .hero__presentation{
     width: 50%;
-    margin-block: 8%;
-    margin-inline: 8%;
 }
 .hero__presentation h2{
     font-size: 36px;
@@ -116,8 +113,8 @@ main{
         font-weight: 400;
         line-height: 24px;
         display: inline-flex;
-        flex-flow: row nowrap;
-        justify-items: stretch;
+        flex-flow: row;
+        justify-content: space-between;
         align-items: center;
     }
     .header__top{
