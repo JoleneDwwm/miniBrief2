@@ -1,0 +1,183 @@
+header{
+    position: fixed;
+    background-color: #ffffff;
+    color: #171321;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: none;
+}
+body{
+    color: #171321;
+    background-color: #D3D3D3;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: none;
+}
+main{
+    padding-top: 10%;
+}
+.freeTrialButton{
+    background-color: #000000;
+    padding: 10px 20px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.header__top{
+    background-color: #171321;
+    color: #ffffff;
+    padding: 2%;
+}
+.header__bottom{
+    background-color: #ffffff;
+    display: inline-flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 2%;
+}
+.header__left{
+    display: none;
+}
+.header__leftOfCenter{
+    display: none;
+}
+.header__right{
+    display: none;
+}
+.hero{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 0%;
+}
+.hero__presentation{
+    margin-block: 8%;
+    margin-inline: 8%;
+}
+.hero__presentation h2{
+    font-size: 36px;
+}
+.hero__presentation p{
+    font-size: 20px;
+}
+.hero__illustration{
+    text-align: center;
+    animation-name: myAnimation;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    height: 85vh; /*hackisch, find a better fix*/
+    background-size: cover;
+}
+.trustedBy{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+    font-size: 20px;
+    margin: 2%;
+}
+.trustedBy span{
+    padding: 2%;
+}
+.cards{
+    gap: 1rem;
+    margin: 2%;
+    padding: 2%;
+}
+.cards__item{
+    background-color: #ffffff;
+    padding: 8%;
+    font-size: 24px;
+}
+@keyframes myAnimation{
+    0%{background-image: url("../images/hero1.png")}
+    33%{background-image: url("../images/hero2.png")}
+    66%{background-image: url("../images/hero3.png")}
+    100%{background-image: url("../images/hero1.png")}
+}
+@media (max-width: 1205px){
+    .trustedBy span{
+        display: block;
+        align-self: center;
+    }
+    /*doesn't work for some reason augh*/
+}
+@media (min-width: 1205px){
+    header{
+        width: 98vw;
+        position: fixed;
+        background-color: #ffffff;
+        color: #171321;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-items: stretch;
+        align-items: center;
+    }
+    .header__top{
+        display: none;
+    }
+    .header__bottom{
+        display: none;
+    }
+    .header__left{
+        display: contents; 
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 1%;
+    }
+    .header__left__left{
+        justify-self: flex-start;
+        margin: 1%;
+    }
+    .header__left__middle{
+        justify-self: flex-start;
+        margin: 1%;
+    }
+    .header__right{
+        display: block; 
+        justify-items: flex-end;
+        align-items: center;
+        margin: 1%;
+    }
+    .hero{
+        width: 98vw;
+        flex-direction: row;
+    }
+    .hero__presentation{
+        height: 85vh;
+    }
+    .hero__illustration{
+        height: 85vh;
+        background-size: cover;
+    }
+    /*all width-height are hackisch, find a better fix*/
+    .cards{
+        display: inline-flex;
+        flex-flow: row;
+        justify-content: space-between;
+        width: 94vw; /*to be fixed*/
+        background-image: url("../images/lineBackground.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .cards__item{
+        flex: 1 1 0;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    div .cards__item:hover{
+        transition-duration: 500ms;
+        background-color: #ffffff;
+        border-bottom-right-radius: 25%;
+    }
+}
